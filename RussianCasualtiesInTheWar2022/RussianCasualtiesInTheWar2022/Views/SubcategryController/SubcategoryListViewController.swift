@@ -7,10 +7,11 @@
 
 import UIKit
 
-class SubcategoryListViewController: UIViewController {
+class SubcategoryListViewController: UIViewController, Storybordable {
     
     // MARK: - Types
-
+    weak var coordinator: AppCoordinator?
+    
     // MARK: - Constants
 
     // MARK: - Public Properties

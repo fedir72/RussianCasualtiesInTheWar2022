@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		BDF232EB28718C1800DA1E25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF232EA28718C1800DA1E25 /* AppDelegate.swift */; };
-		BDF232ED28718C1800DA1E25 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF232EC28718C1800DA1E25 /* SceneDelegate.swift */; };
 		BDF232EF28718C1800DA1E25 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF232EE28718C1800DA1E25 /* CategoryViewController.swift */; };
 		BDF232F228718C1800DA1E25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDF232F028718C1800DA1E25 /* Main.storyboard */; };
 		BDF232F428718C1900DA1E25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDF232F328718C1900DA1E25 /* Assets.xcassets */; };
@@ -17,12 +16,14 @@
 		BDF2330628718E0E00DA1E25 /* russia_losses_equipment.json in Resources */ = {isa = PBXBuildFile; fileRef = BDF2330428718E0E00DA1E25 /* russia_losses_equipment.json */; };
 		BDF2330728718E0E00DA1E25 /* russia_losses_personnel.json in Resources */ = {isa = PBXBuildFile; fileRef = BDF2330528718E0E00DA1E25 /* russia_losses_personnel.json */; };
 		BDF2330928718E7F00DA1E25 /* SubcategoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF2330828718E7F00DA1E25 /* SubcategoryListViewController.swift */; };
+		BDF23310287194EF00DA1E25 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF2330F287194EF00DA1E25 /* AppCoordinator.swift */; };
+		BDF233122871950600DA1E25 /* Storybordable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF233112871950600DA1E25 /* Storybordable.swift */; };
+		BDF23314287195B100DA1E25 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF23313287195B100DA1E25 /* Coordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BDF232E728718C1800DA1E25 /* RussianCasualtiesInTheWar2022.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RussianCasualtiesInTheWar2022.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDF232EA28718C1800DA1E25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BDF232EC28718C1800DA1E25 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		BDF232EE28718C1800DA1E25 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		BDF232F128718C1800DA1E25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BDF232F328718C1900DA1E25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -32,6 +33,9 @@
 		BDF2330428718E0E00DA1E25 /* russia_losses_equipment.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = russia_losses_equipment.json; sourceTree = "<group>"; };
 		BDF2330528718E0E00DA1E25 /* russia_losses_personnel.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = russia_losses_personnel.json; sourceTree = "<group>"; };
 		BDF2330828718E7F00DA1E25 /* SubcategoryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubcategoryListViewController.swift; sourceTree = "<group>"; };
+		BDF2330F287194EF00DA1E25 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		BDF233112871950600DA1E25 /* Storybordable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storybordable.swift; sourceTree = "<group>"; };
+		BDF23313287195B100DA1E25 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +109,6 @@
 			isa = PBXGroup;
 			children = (
 				BDF2330028718CF400DA1E25 /* Storyboards */,
-				BDF232EC28718C1800DA1E25 /* SceneDelegate.swift */,
 				BDF232EA28718C1800DA1E25 /* AppDelegate.swift */,
 				BDF232F328718C1900DA1E25 /* Assets.xcassets */,
 			);
@@ -133,6 +136,9 @@
 		BDF2330C287192DC00DA1E25 /* AppCoordinator */ = {
 			isa = PBXGroup;
 			children = (
+				BDF23313287195B100DA1E25 /* Coordinator.swift */,
+				BDF2330F287194EF00DA1E25 /* AppCoordinator.swift */,
+				BDF233112871950600DA1E25 /* Storybordable.swift */,
 			);
 			path = AppCoordinator;
 			sourceTree = "<group>";
@@ -224,10 +230,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDF23310287194EF00DA1E25 /* AppCoordinator.swift in Sources */,
 				BDF232EF28718C1800DA1E25 /* CategoryViewController.swift in Sources */,
 				BDF232EB28718C1800DA1E25 /* AppDelegate.swift in Sources */,
 				BDF2330928718E7F00DA1E25 /* SubcategoryListViewController.swift in Sources */,
-				BDF232ED28718C1800DA1E25 /* SceneDelegate.swift in Sources */,
+				BDF23314287195B100DA1E25 /* Coordinator.swift in Sources */,
+				BDF233122871950600DA1E25 /* Storybordable.swift in Sources */,
 				BDF2330328718DDD00DA1E25 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -380,7 +388,6 @@
 				INFOPLIST_FILE = RussianCasualtiesInTheWar2022/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -388,7 +395,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.raywenderlich.RussianCasualtiesInTheWar2022;
+				PRODUCT_BUNDLE_IDENTIFIER = RussianCasualtiesInTheWar2022;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -408,7 +415,6 @@
 				INFOPLIST_FILE = RussianCasualtiesInTheWar2022/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -416,7 +422,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.raywenderlich.RussianCasualtiesInTheWar2022;
+				PRODUCT_BUNDLE_IDENTIFIER = RussianCasualtiesInTheWar2022;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

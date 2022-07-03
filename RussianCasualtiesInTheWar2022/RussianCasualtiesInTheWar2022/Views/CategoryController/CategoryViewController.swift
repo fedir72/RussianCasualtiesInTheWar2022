@@ -7,9 +7,10 @@
 
 import UIKit
 
-class CategoryViewController: UIViewController {
+class CategoryViewController: UIViewController, Storybordable {
+    
     // MARK: - Types
-
+    weak var coordinator: AppCoordinator?
     // MARK: - Constants
 
     // MARK: - Public Properties
@@ -22,7 +23,9 @@ class CategoryViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+     title  = "categories"
+        
+        
     }
     
     // MARK: - Public Methods

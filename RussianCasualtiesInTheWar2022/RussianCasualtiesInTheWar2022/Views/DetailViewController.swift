@@ -7,10 +7,11 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController,Storybordable {
     
     // MARK: - Types
-
+    weak var coordinator: AppCoordinator?
+    
     // MARK: - Constants
 
     // MARK: - Public Properties
