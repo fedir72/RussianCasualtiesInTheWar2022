@@ -22,13 +22,13 @@ class ListCollectionViewCell: UICollectionViewCell {
         backgroundColor = .clear
         layer.cornerRadius = 10
         layer.borderWidth = 1
-        layer.borderColor = UIColor.systemGray5.cgColor
+        layer.borderColor = UIColor.systemGray3.cgColor
         clipsToBounds = true
     }
     
     open func setupCell(with item: Casualties) {
-        dayOfMonthLabel.text = "10"
-        dayOfVarlabel.text = "125"
+        dayOfMonthLabel.text = String(item.dateArray()[2])
+        dayOfVarlabel.text = "day: " + String(item.day)
     }
    
 }

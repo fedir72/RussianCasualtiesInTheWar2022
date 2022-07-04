@@ -3,7 +3,9 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -17,41 +19,46 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="125" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8he-ys-1aF">
-                        <rect key="frame" x="0.0" y="49" width="53" height="21"/>
+                        <rect key="frame" x="0.0" y="52" width="53" height="18"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="21" id="79N-ZG-hTM"/>
+                            <constraint firstAttribute="height" constant="18" id="Vtt-IM-TQW"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                        <nil key="textColor"/>
+                        <color key="textColor" systemColor="systemGray2Color"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4zX-fA-kl0">
-                        <rect key="frame" x="0.0" y="0.0" width="51.5" height="49"/>
-                        <constraints>
-                            <constraint firstAttribute="width" secondItem="4zX-fA-kl0" secondAttribute="height" multiplier="85:81" id="FEP-pq-TP2"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="31"/>
-                        <nil key="textColor"/>
+                        <rect key="frame" x="0.0" y="0.0" width="53" height="52"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                        <color key="textColor" name="customlabelColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="8he-ys-1aF" secondAttribute="trailing" id="KS0-bw-VWl"/>
-                <constraint firstItem="8he-ys-1aF" firstAttribute="top" secondItem="4zX-fA-kl0" secondAttribute="bottom" id="PvR-GM-2Nz"/>
-                <constraint firstItem="4zX-fA-kl0" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="jmv-01-nbI"/>
-                <constraint firstAttribute="trailing" secondItem="4zX-fA-kl0" secondAttribute="trailing" id="pc4-xg-9cv"/>
-                <constraint firstItem="8he-ys-1aF" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ph8-3L-YIq"/>
-                <constraint firstItem="4zX-fA-kl0" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="uzF-aD-83w"/>
-                <constraint firstAttribute="bottom" secondItem="8he-ys-1aF" secondAttribute="bottom" id="yQK-ns-e9K"/>
+                <constraint firstItem="8he-ys-1aF" firstAttribute="top" secondItem="4zX-fA-kl0" secondAttribute="bottom" id="FFH-0S-NbV"/>
+                <constraint firstItem="8he-ys-1aF" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="H10-A6-mAG"/>
+                <constraint firstAttribute="trailing" secondItem="4zX-fA-kl0" secondAttribute="trailing" id="L6O-jS-osr"/>
+                <constraint firstItem="4zX-fA-kl0" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="YEh-od-5ZW"/>
+                <constraint firstAttribute="bottom" secondItem="8he-ys-1aF" secondAttribute="bottom" id="bll-3e-e6c"/>
+                <constraint firstItem="4zX-fA-kl0" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="mgy-fW-NYO"/>
+                <constraint firstAttribute="trailing" secondItem="8he-ys-1aF" secondAttribute="trailing" id="pTp-N9-Szd"/>
             </constraints>
             <size key="customSize" width="53" height="70"/>
             <connections>
                 <outlet property="dayOfMonthLabel" destination="4zX-fA-kl0" id="pOE-2w-Ygg"/>
                 <outlet property="dayOfVarlabel" destination="8he-ys-1aF" id="kpA-6U-IIn"/>
             </connections>
-            <point key="canvasLocation" x="134.05797101449275" y="54.241071428571423"/>
+            <point key="canvasLocation" x="132.60869565217394" y="54.241071428571423"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <namedColor name="customlabelColor">
+            <color red="0.045278936624526978" green="0.5" blue="0.80401545763015747" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

@@ -27,12 +27,10 @@ struct Equipment: Casualties {
     let vehiclesAndFuelTanks: Int
     let cruiseMissiles: Int
     
-    func dayOfMonth() -> String {
-        guard let i = self.date.split(separator: "-").last else {
-            return "1"
-        }
-        return String(i)
+    func dateArray() -> [Int] {
+        self.date.split(separator: "-").compactMap{ Int($0) }
     }
+    
     init(with dictionary: [String:Any]) {
         self.date = dictionary["date"] as? String ?? ""
         self.day = dictionary["day"] as? Int ?? 0
