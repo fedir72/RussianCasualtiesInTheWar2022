@@ -26,6 +26,7 @@ class AppCoordinator: Coordinator {
     func goToListVC(with type: Category) {
         let vc = ListViewController.createObject()
         vc.coordinator = self
+        vc.title =  "\(type.categoryName()) losses"
         vc.category = type
         navigationController.pushViewController(vc, animated: true)
     }

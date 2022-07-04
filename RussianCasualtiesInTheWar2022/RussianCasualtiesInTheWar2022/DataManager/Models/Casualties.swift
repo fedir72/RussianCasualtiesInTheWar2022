@@ -10,4 +10,5 @@ import Foundation
 protocol Casualties {
     var date: String { get }
     var day: Int { get }
+    func dayOfMonth() -> String 
 }

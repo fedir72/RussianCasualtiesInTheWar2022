@@ -14,6 +14,13 @@ struct Personnel: Casualties {
    let personnelDescripton: String
    let POW: Int
     
+    func dayOfMonth() -> String {
+        guard let i = self.date.split(separator: "-").last else {
+            return "1"
+        }
+        return String(i)
+    }
+    
     init(with dictionary: [String:Any]) {
         self.date = dictionary["date"] as? String ?? ""
         self.day = dictionary["day"] as? Int ?? 0

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ListCollectionViewCell" id="gTV-IL-0wX" customClass="ListCollectionViewCell" customModule="RussianCasualtiesInTheWar2022" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="53" height="70"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="53" height="70"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="125" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8he-ys-1aF">
+                        <rect key="frame" x="0.0" y="49" width="53" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="79N-ZG-hTM"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4zX-fA-kl0">
+                        <rect key="frame" x="0.0" y="0.0" width="51.5" height="49"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="4zX-fA-kl0" secondAttribute="height" multiplier="85:81" id="FEP-pq-TP2"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="8he-ys-1aF" secondAttribute="trailing" id="KS0-bw-VWl"/>
+                <constraint firstItem="8he-ys-1aF" firstAttribute="top" secondItem="4zX-fA-kl0" secondAttribute="bottom" id="PvR-GM-2Nz"/>
+                <constraint firstItem="4zX-fA-kl0" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="jmv-01-nbI"/>
+                <constraint firstAttribute="trailing" secondItem="4zX-fA-kl0" secondAttribute="trailing" id="pc4-xg-9cv"/>
+                <constraint firstItem="8he-ys-1aF" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ph8-3L-YIq"/>
+                <constraint firstItem="4zX-fA-kl0" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="uzF-aD-83w"/>
+                <constraint firstAttribute="bottom" secondItem="8he-ys-1aF" secondAttribute="bottom" id="yQK-ns-e9K"/>
+            </constraints>
+            <size key="customSize" width="53" height="70"/>
+            <connections>
+                <outlet property="dayOfMonthLabel" destination="4zX-fA-kl0" id="pOE-2w-Ygg"/>
+                <outlet property="dayOfVarlabel" destination="8he-ys-1aF" id="kpA-6U-IIn"/>
+            </connections>
+            <point key="canvasLocation" x="134.05797101449275" y="54.241071428571423"/>
+        </collectionViewCell>
+    </objects>
+</document>

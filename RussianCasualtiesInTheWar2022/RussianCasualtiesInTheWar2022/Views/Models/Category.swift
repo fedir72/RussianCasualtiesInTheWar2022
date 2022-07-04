@@ -22,8 +22,8 @@ extension Category {
     
     func categoryName() -> String {
         switch self {
-        case .personnel: return " personnel"
-        case .equipment: return "equipment"
+        case .personnel: return "Personnel"
+        case .equipment: return "Equipment"
         }
     }
 }
