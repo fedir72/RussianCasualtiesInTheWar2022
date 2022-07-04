@@ -23,9 +23,10 @@ class AppCoordinator: Coordinator {
         navigationController.pushViewController(vc, animated: true)
     }
     
-    func goToListVC() {
-        let vc = SubcategoryListViewController.createObject()
+    func goToListVC(with type: Category) {
+        let vc = ListViewController.createObject()
         vc.coordinator = self
+        vc.category = type
         navigationController.pushViewController(vc, animated: true)
     }
     

@@ -15,18 +15,33 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="bCh-hV-OES">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <constraints>
+                            <constraint firstItem="bCh-hV-OES" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="PzC-iS-3JX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bCh-hV-OES" secondAttribute="trailing" id="VSw-bp-OYY"/>
+                            <constraint firstItem="bCh-hV-OES" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ZUQ-bP-54V"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bCh-hV-OES" secondAttribute="bottom" id="a9m-Jm-eRZ"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="categoryTableview" destination="bCh-hV-OES" id="9AC-8w-iY9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="30" y="84"/>
         </scene>
-        <!--Subcategory List View Controller-->
+        <!--List View Controller-->
         <scene sceneID="pR9-KR-qlH">
             <objects>
-                <viewController storyboardIdentifier="SubcategoryListViewController" id="7ZV-um-eD5" customClass="SubcategoryListViewController" customModule="RussianCasualtiesInTheWar2022" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ListViewController" id="7ZV-um-eD5" customClass="ListViewController" customModule="RussianCasualtiesInTheWar2022" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OdU-Vi-iKr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -55,6 +70,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

@@ -11,7 +11,7 @@ protocol Coordinator {
     var navigationController: UINavigationController { get set }
     
     func start()
-    func goToListVC()
+    func goToListVC(with type: Category)
     func goToDetailVC()
   
 }

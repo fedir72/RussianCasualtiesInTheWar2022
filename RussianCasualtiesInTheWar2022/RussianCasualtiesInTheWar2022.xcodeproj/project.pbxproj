@@ -7,21 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD04C6192872EBB600410DD8 /* Casualties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD04C6182872EBB600410DD8 /* Casualties.swift */; };
+		BDB9896C28721B6E004FAE1A /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB9896B28721B6E004FAE1A /* CustomError.swift */; };
 		BDF232EB28718C1800DA1E25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF232EA28718C1800DA1E25 /* AppDelegate.swift */; };
 		BDF232EF28718C1800DA1E25 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF232EE28718C1800DA1E25 /* CategoryViewController.swift */; };
 		BDF232F228718C1800DA1E25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDF232F028718C1800DA1E25 /* Main.storyboard */; };
 		BDF232F428718C1900DA1E25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDF232F328718C1900DA1E25 /* Assets.xcassets */; };
 		BDF232F728718C1900DA1E25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDF232F528718C1900DA1E25 /* LaunchScreen.storyboard */; };
 		BDF2330328718DDD00DA1E25 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF2330228718DDD00DA1E25 /* DetailViewController.swift */; };
-		BDF2330628718E0E00DA1E25 /* russia_losses_equipment.json in Resources */ = {isa = PBXBuildFile; fileRef = BDF2330428718E0E00DA1E25 /* russia_losses_equipment.json */; };
-		BDF2330728718E0E00DA1E25 /* russia_losses_personnel.json in Resources */ = {isa = PBXBuildFile; fileRef = BDF2330528718E0E00DA1E25 /* russia_losses_personnel.json */; };
-		BDF2330928718E7F00DA1E25 /* SubcategoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF2330828718E7F00DA1E25 /* SubcategoryListViewController.swift */; };
+		BDF2330928718E7F00DA1E25 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF2330828718E7F00DA1E25 /* ListViewController.swift */; };
 		BDF23310287194EF00DA1E25 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF2330F287194EF00DA1E25 /* AppCoordinator.swift */; };
 		BDF233122871950600DA1E25 /* Storybordable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF233112871950600DA1E25 /* Storybordable.swift */; };
 		BDF23314287195B100DA1E25 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF23313287195B100DA1E25 /* Coordinator.swift */; };
+		BDF233172871B2E000DA1E25 /* Equipment.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF233162871B2E000DA1E25 /* Equipment.swift */; };
+		BDF233192871B2F200DA1E25 /* Personnel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF233182871B2F200DA1E25 /* Personnel.swift */; };
+		BDF2331C2871C1D800DA1E25 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF2331B2871C1D800DA1E25 /* DataManager.swift */; };
+		BDF2331F2871EBBC00DA1E25 /* russia_losses_personnel.json in Resources */ = {isa = PBXBuildFile; fileRef = BDF2331D2871EBBC00DA1E25 /* russia_losses_personnel.json */; };
+		BDF233202871EBBC00DA1E25 /* russia_losses_equipment.json in Resources */ = {isa = PBXBuildFile; fileRef = BDF2331E2871EBBC00DA1E25 /* russia_losses_equipment.json */; };
+		BDF233252871EE8800DA1E25 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF233232871EE8800DA1E25 /* CategoryTableViewCell.swift */; };
+		BDF233262871EE8800DA1E25 /* CategoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDF233242871EE8800DA1E25 /* CategoryTableViewCell.xib */; };
+		BDF233282871EFB200DA1E25 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF233272871EFB200DA1E25 /* Category.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BD04C6182872EBB600410DD8 /* Casualties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Casualties.swift; sourceTree = "<group>"; };
+		BDB9896B28721B6E004FAE1A /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
 		BDF232E728718C1800DA1E25 /* RussianCasualtiesInTheWar2022.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RussianCasualtiesInTheWar2022.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDF232EA28718C1800DA1E25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDF232EE28718C1800DA1E25 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
@@ -30,12 +40,18 @@
 		BDF232F628718C1900DA1E25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BDF232F828718C1900DA1E25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BDF2330228718DDD00DA1E25 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		BDF2330428718E0E00DA1E25 /* russia_losses_equipment.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = russia_losses_equipment.json; sourceTree = "<group>"; };
-		BDF2330528718E0E00DA1E25 /* russia_losses_personnel.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = russia_losses_personnel.json; sourceTree = "<group>"; };
-		BDF2330828718E7F00DA1E25 /* SubcategoryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubcategoryListViewController.swift; sourceTree = "<group>"; };
+		BDF2330828718E7F00DA1E25 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		BDF2330F287194EF00DA1E25 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		BDF233112871950600DA1E25 /* Storybordable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storybordable.swift; sourceTree = "<group>"; };
 		BDF23313287195B100DA1E25 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		BDF233162871B2E000DA1E25 /* Equipment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Equipment.swift; sourceTree = "<group>"; };
+		BDF233182871B2F200DA1E25 /* Personnel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Personnel.swift; sourceTree = "<group>"; };
+		BDF2331B2871C1D800DA1E25 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		BDF2331D2871EBBC00DA1E25 /* russia_losses_personnel.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = russia_losses_personnel.json; sourceTree = "<group>"; };
+		BDF2331E2871EBBC00DA1E25 /* russia_losses_equipment.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = russia_losses_equipment.json; sourceTree = "<group>"; };
+		BDF233232871EE8800DA1E25 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
+		BDF233242871EE8800DA1E25 /* CategoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryTableViewCell.xib; sourceTree = "<group>"; };
+		BDF233272871EFB200DA1E25 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				BDF2330128718D1900DA1E25 /* App */,
-				BDF232FF28718CBD00DA1E25 /* DataJson */,
+				BDF2331A2871BC9000DA1E25 /* DataManager */,
 				BDF232FE28718CAD00DA1E25 /* Views */,
 				BDF2330C287192DC00DA1E25 /* AppCoordinator */,
 				BDF232F828718C1900DA1E25 /* Info.plist */,
@@ -81,7 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				BDF2330A28718E9300DA1E25 /* CategoryController */,
-				BDF2330B28718EAA00DA1E25 /* SubcategryController */,
+				BDF2330B28718EAA00DA1E25 /* ListController */,
 				BDF2330228718DDD00DA1E25 /* DetailViewController.swift */,
 			);
 			path = Views;
@@ -90,8 +106,8 @@
 		BDF232FF28718CBD00DA1E25 /* DataJson */ = {
 			isa = PBXGroup;
 			children = (
-				BDF2330428718E0E00DA1E25 /* russia_losses_equipment.json */,
-				BDF2330528718E0E00DA1E25 /* russia_losses_personnel.json */,
+				BDF2331E2871EBBC00DA1E25 /* russia_losses_equipment.json */,
+				BDF2331D2871EBBC00DA1E25 /* russia_losses_personnel.json */,
 			);
 			path = DataJson;
 			sourceTree = "<group>";
@@ -118,19 +134,20 @@
 		BDF2330A28718E9300DA1E25 /* CategoryController */ = {
 			isa = PBXGroup;
 			children = (
-				BDF2330D2871931900DA1E25 /* Cell */,
 				BDF232EE28718C1800DA1E25 /* CategoryViewController.swift */,
+				BDF233292871F78F00DA1E25 /* Models */,
+				BDF2330D2871931900DA1E25 /* Cell */,
 			);
 			path = CategoryController;
 			sourceTree = "<group>";
 		};
-		BDF2330B28718EAA00DA1E25 /* SubcategryController */ = {
+		BDF2330B28718EAA00DA1E25 /* ListController */ = {
 			isa = PBXGroup;
 			children = (
 				BDF2330E2871933300DA1E25 /* Cell */,
-				BDF2330828718E7F00DA1E25 /* SubcategoryListViewController.swift */,
+				BDF2330828718E7F00DA1E25 /* ListViewController.swift */,
 			);
-			path = SubcategryController;
+			path = ListController;
 			sourceTree = "<group>";
 		};
 		BDF2330C287192DC00DA1E25 /* AppCoordinator */ = {
@@ -146,6 +163,8 @@
 		BDF2330D2871931900DA1E25 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				BDF233232871EE8800DA1E25 /* CategoryTableViewCell.swift */,
+				BDF233242871EE8800DA1E25 /* CategoryTableViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -155,6 +174,35 @@
 			children = (
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		BDF233152871B2B300DA1E25 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BD04C6182872EBB600410DD8 /* Casualties.swift */,
+				BDF233162871B2E000DA1E25 /* Equipment.swift */,
+				BDF233182871B2F200DA1E25 /* Personnel.swift */,
+				BDB9896B28721B6E004FAE1A /* CustomError.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BDF2331A2871BC9000DA1E25 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				BDF233152871B2B300DA1E25 /* Models */,
+				BDF232FF28718CBD00DA1E25 /* DataJson */,
+				BDF2331B2871C1D800DA1E25 /* DataManager.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		BDF233292871F78F00DA1E25 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BDF233272871EFB200DA1E25 /* Category.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,10 +263,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDF2331F2871EBBC00DA1E25 /* russia_losses_personnel.json in Resources */,
 				BDF232F728718C1900DA1E25 /* LaunchScreen.storyboard in Resources */,
 				BDF232F428718C1900DA1E25 /* Assets.xcassets in Resources */,
-				BDF2330628718E0E00DA1E25 /* russia_losses_equipment.json in Resources */,
-				BDF2330728718E0E00DA1E25 /* russia_losses_personnel.json in Resources */,
+				BDF233262871EE8800DA1E25 /* CategoryTableViewCell.xib in Resources */,
+				BDF233202871EBBC00DA1E25 /* russia_losses_equipment.json in Resources */,
 				BDF232F228718C1800DA1E25 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -231,12 +280,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDF23310287194EF00DA1E25 /* AppCoordinator.swift in Sources */,
+				BDF2331C2871C1D800DA1E25 /* DataManager.swift in Sources */,
+				BDB9896C28721B6E004FAE1A /* CustomError.swift in Sources */,
 				BDF232EF28718C1800DA1E25 /* CategoryViewController.swift in Sources */,
+				BDF233192871B2F200DA1E25 /* Personnel.swift in Sources */,
+				BDF233172871B2E000DA1E25 /* Equipment.swift in Sources */,
 				BDF232EB28718C1800DA1E25 /* AppDelegate.swift in Sources */,
-				BDF2330928718E7F00DA1E25 /* SubcategoryListViewController.swift in Sources */,
+				BDF233252871EE8800DA1E25 /* CategoryTableViewCell.swift in Sources */,
+				BDF2330928718E7F00DA1E25 /* ListViewController.swift in Sources */,
+				BD04C6192872EBB600410DD8 /* Casualties.swift in Sources */,
 				BDF23314287195B100DA1E25 /* Coordinator.swift in Sources */,
 				BDF233122871950600DA1E25 /* Storybordable.swift in Sources */,
 				BDF2330328718DDD00DA1E25 /* DetailViewController.swift in Sources */,
+				BDF233282871EFB200DA1E25 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
