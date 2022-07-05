@@ -1,0 +1,45 @@
+
+"Categories" = "Категории потерь";
+"Personnel" = "Личный состав";
+"Equipment" = "Оборудование";
+
+"January" = "Январь";
+"February" = "Февраль";
+"March" = "Март";
+"April" = "Апрель";
+"May" = "Май";
+"June" = "Июнь";
+"July" = "Июль";
+"August" = "Август";
+"September" = "Сентябрь";
+"October" = "Октябрь";
+"November" = "Ноябрь";
+"December" = "Декабрь";
+
+"day: " = "день: ";
+"no data" = "данные отсуствуют";
+
+"date" = "Дата:";
+"day" = "День:";
+"aircraft" = "Самолеты:";
+"helicopter" = "Вертолеты:";
+"tank" = "Танки:";
+"APC" = "БТР:";
+"field artillery" = "Полевая артиллерия:";
+"MRL" = "РСЗО:";
+"military auto" = "Военный транспорт:";
+"fuel tank" = "Топливные резервуары:";
+"drone" = "Дроны:";
+"naval ship" = "Военные корабли:";
+"anti-aircraft warfare" = "Системы ПВО:";
+"special equipment" = "Специальное оборудование:";
+"mobile SRBM system" = "Мобильные ракетные системы:";
+"vehicles and fuel tanks" = "Топливозаправщики:";
+"cruise missiles" = "Крылатые ракеты:";
+
+"Casualties in:" = "Потери на:";
+"Day of war:" = "День войны:";
+"Personnel:" = "Погибшие:";
+"POW:" = "Пленные:";
+
+"Details" = "Подробно";

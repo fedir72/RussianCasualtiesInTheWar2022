@@ -7,11 +7,6 @@
 
 import Foundation
 
-//enum DataType {
-//    case personnel
-//    case equipment
-//}
-
 class DataManager {
     static let shared = DataManager()
     private init() { }
@@ -36,8 +31,8 @@ extension Bundle {
     
     private func fixUnvalideJSONdata(_ data: Data) -> Data? {
         guard let str = String(bytes: data, encoding: .utf8) else { return nil}
-        let newStr = str.replacingOccurrences(of: "NaN", with: "0")
-        guard let fixData = newStr.data(using: .utf8) else {return nil}
+        let newStr = str.replacingOccurrences(of: "NaN", with: "null")
+        guard let fixData = newStr.data(using: .utf8) else { return nil }
         return fixData
     }
      

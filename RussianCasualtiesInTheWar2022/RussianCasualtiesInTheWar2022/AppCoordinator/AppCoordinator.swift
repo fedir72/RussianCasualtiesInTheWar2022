@@ -26,14 +26,15 @@ class AppCoordinator: Coordinator {
     func goToListVC(with type: Category) {
         let vc = ListViewController.createObject()
         vc.coordinator = self
-        vc.title =  "\(type.categoryName()) losses"
+        vc.title =  "\(type.categoryName())"
         vc.category = type
         navigationController.pushViewController(vc, animated: true)
     }
     
-    func goToDetailVC() {
+    func goToDetailVC(with text: String) {
         let vc = DetailViewController.createObject()
         vc.coordinator = self
+        vc.descriptionText = text
         navigationController.pushViewController(vc, animated: true)
     }
     

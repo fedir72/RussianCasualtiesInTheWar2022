@@ -12,6 +12,5 @@ protocol Coordinator {
     
     func start()
     func goToListVC(with type: Category)
-    func goToDetailVC()
-  
+    func goToDetailVC(with text: String)
 }

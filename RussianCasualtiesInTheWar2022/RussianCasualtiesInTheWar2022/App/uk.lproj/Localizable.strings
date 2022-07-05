@@ -1,0 +1,45 @@
+
+"Categories" = "Категорії втрат";
+"Personnel" = "Особовий склад";
+"Equipment" = "Обладнання";
+
+"January" = "Січень";
+"February" = "Лютий";
+"March" = "Березень";
+"April" = "Квітень";
+"May" = "Травень";
+"June" = "Червень";
+"July" = "Липень";
+"August" = "Серпень";
+"September" = "Вересень";
+"October" = "Жовтень";
+"November" = "Листопад";
+"December" = "Грудень";
+
+"day: " = "день: ";
+"no data" = "данні відсутні";
+
+"date" = "Дата:";
+"day" = "День:";
+"aircraft" = "Літаки:";
+"helicopter" = "Гелікоптери:";
+"tank" = "Танки:";
+"APC" = "БТР:";
+"field artillery" = "Польова артилерія:";
+"MRL" = "РСЗВ:";
+"military auto" = "Військовий транспорт:";
+"fuel tank" = "Паливні резервуари:";
+"drone" = "Дрони:";
+"naval ship" = "Військові кораблі:";
+"anti-aircraft warfare" = "Засоби ППО:";
+"special equipment" = "Спеціальне обладнання:";
+"mobile SRBM system" = "Мобільні ракетні сістемі:";
+"vehicles and fuel tanks" = "Паливозаправники:";
+"cruise missiles" = "Крілаті ракети:";
+
+"Casualties in:" = "Втрати на:";
+"Day of war:" = "День війни:";
+"Personnel:" = "Загиблі:";
+"POW:" = "Полонені:";
+
+"Details" = "Докладно";

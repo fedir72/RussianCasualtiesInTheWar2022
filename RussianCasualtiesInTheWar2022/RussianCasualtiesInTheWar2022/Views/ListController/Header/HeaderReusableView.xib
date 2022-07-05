@@ -15,30 +15,26 @@
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2022" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DGN-vS-lcG">
-                    <rect key="frame" x="15" y="5" width="55" height="40"/>
-                    <constraints>
-                        <constraint firstAttribute="width" secondItem="DGN-vS-lcG" secondAttribute="height" multiplier="55:40" id="Qib-ch-NUt"/>
-                    </constraints>
+                    <rect key="frame" x="15" y="5" width="51" height="40"/>
                     <fontDescription key="fontDescription" type="system" pointSize="22"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="February" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yy5-cM-Ier">
-                    <rect key="frame" x="75" y="5" width="230" height="40"/>
+                    <rect key="frame" x="204" y="5" width="100" height="40"/>
                     <fontDescription key="fontDescription" type="system" pointSize="26"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
-            <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="DGN-vS-lcG" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" constant="15" id="2l1-mH-w2m"/>
-                <constraint firstAttribute="trailing" secondItem="Yy5-cM-Ier" secondAttribute="trailing" constant="15" id="5pL-Lq-BN9"/>
-                <constraint firstItem="VXr-Tz-HHm" firstAttribute="bottom" secondItem="DGN-vS-lcG" secondAttribute="bottom" constant="5" id="6If-3w-nco"/>
-                <constraint firstItem="VXr-Tz-HHm" firstAttribute="bottom" secondItem="Yy5-cM-Ier" secondAttribute="bottom" constant="5" id="EtC-dl-WDd"/>
-                <constraint firstItem="DGN-vS-lcG" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" constant="5" id="Hul-gm-rMj"/>
-                <constraint firstItem="Yy5-cM-Ier" firstAttribute="leading" secondItem="DGN-vS-lcG" secondAttribute="trailing" constant="5" id="MWH-bh-7g4"/>
-                <constraint firstItem="Yy5-cM-Ier" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" constant="5" id="Psm-R9-y07"/>
+                <constraint firstItem="VXr-Tz-HHm" firstAttribute="bottom" secondItem="Yy5-cM-Ier" secondAttribute="bottom" constant="5" id="B83-hZ-ZRQ"/>
+                <constraint firstAttribute="trailing" secondItem="Yy5-cM-Ier" secondAttribute="trailing" constant="16" id="Drr-Dm-I7z"/>
+                <constraint firstItem="DGN-vS-lcG" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" constant="5" id="jET-Ym-sKR"/>
+                <constraint firstItem="DGN-vS-lcG" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" constant="15" id="lul-Ki-dHy"/>
+                <constraint firstItem="Yy5-cM-Ier" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" constant="5" id="nM7-cd-5Ln"/>
+                <constraint firstItem="VXr-Tz-HHm" firstAttribute="bottom" secondItem="DGN-vS-lcG" secondAttribute="bottom" constant="5" id="noH-MM-7bT"/>
             </constraints>
             <connections>
                 <outlet property="monthLabel" destination="Yy5-cM-Ier" id="tuW-8b-Pdk"/>
@@ -48,8 +44,8 @@
         </collectionReusableView>
     </objects>
     <resources>
-        <systemColor name="secondarySystemBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

@@ -26,7 +26,7 @@ class CategoryViewController: UIViewController, Storybordable {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
-     title  = "Categories"
+        title  = "Categories".localized()
     }
     
     // MARK: - Public Methods

@@ -11,5 +11,6 @@ protocol Casualties {
     var date: String { get }
     var day: Int { get }
     func dateArray() -> [Int]
+    func detailText() -> String
 }
 

@@ -6,6 +6,9 @@
 //
 
 import UIKit
+private struct Constant {
+    static let day = "day: ".localized()
+}
 
 class ListCollectionViewCell: UICollectionViewCell {
     
@@ -28,7 +31,7 @@ class ListCollectionViewCell: UICollectionViewCell {
     
     open func setupCell(with item: Casualties) {
         dayOfMonthLabel.text = String(item.dateArray()[2])
-        dayOfVarlabel.text = "day: " + String(item.day)
+        dayOfVarlabel.text = Constant.day + String(item.day)
     }
    
 }

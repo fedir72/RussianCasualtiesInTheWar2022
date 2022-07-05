@@ -15,15 +15,15 @@ enum Category: CaseIterable {
 extension Category {
     func imageName() -> String {
         switch self {
-        case .personnel: return "person.fill.xmark"
-        case .equipment: return "airplane.circle"
+        case .personnel: return "scull"
+        case .equipment: return "canon"
         }
     }
     
     func categoryName() -> String {
         switch self {
-        case .personnel: return "Personnel"
-        case .equipment: return "Equipment"
+        case .personnel: return "Personnel".localized()
+        case .equipment: return "Equipment".localized()
         }
     }
 }

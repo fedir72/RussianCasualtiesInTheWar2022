@@ -12,25 +12,17 @@ fileprivate struct Constant {
     static let minimumSpasing: CGFloat = 2
     static let numberOfItemsInRow: CGFloat = 7
     static let aspectRatio: CGFloat = 1.1
-    static let headerHeight: CGFloat = 50
+    static let headerHeight: CGFloat = 40
 }
 
 class ListViewController: UIViewController, Storybordable {
-    
-    let dataManager = DataManager.shared
     // MARK: - Types
+    private let dataManager = DataManager.shared
     weak var coordinator: AppCoordinator?
-    var category: Category? {
-        didSet {}
-    }
+    var category: Category?
     var datasourse = [Casualties]() {
         didSet { listCollectionView.reloadData() }
     }
-    // MARK: - Constants
-
-    // MARK: - Public Properties
-
-    // MARK: - Subview Properties
 
     // MARK: - Private Properties
     lazy private var listCollectionView: UICollectionView = {
@@ -45,14 +37,10 @@ class ListViewController: UIViewController, Storybordable {
         return cv
     }()
     
-    // MARK: - UIViewController(*)
+    // MARK: - UIViewController lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        listCollectionView.backgroundColor = .clear
-        view.addSubview(listCollectionView)
-        listCollectionView.dataSource = self
-        listCollectionView.delegate = self
         if let category = category {
             dataManager.getData(by: category) { result in
                 switch result {
@@ -75,14 +63,6 @@ class ListViewController: UIViewController, Storybordable {
         listCollectionView.frame = view.bounds
         setupCollectionView()
     }
-    
-    // MARK: - Public Methods
-
-    // MARK: - Private Methods
-    private func setupCollectionView() {
-    
-    }
-  
 }
 
 //MARK: - UICollectionViewDatasourse
@@ -102,12 +82,10 @@ extension ListViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
         let month = months()[indexPath.section]
-        print("month",month)
         let item =  daysInMonth(with: month)[indexPath.item]
-        print("item",item)
-        guard let cell = listCollectionView.dequeueReusableCell(withReuseIdentifier:
+        guard let cell =
+        listCollectionView.dequeueReusableCell(withReuseIdentifier:
                                                 ListCollectionViewCell.id,
                                                 for: indexPath) as? ListCollectionViewCell else {
             return UICollectionViewCell()
@@ -115,6 +93,7 @@ extension ListViewController: UICollectionViewDataSource {
         cell.setupCell(with: item)
         return cell
     }
+    
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let monthNumber = self.months()[indexPath.section]
         let view = listCollectionView.dequeueReusableSupplementaryView(
@@ -130,13 +109,17 @@ extension ListViewController: UICollectionViewDataSource {
 //MARK: - UICollectionViewDelegate
 extension ListViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(indexPath.row)
+        let month = months()[indexPath.section]
+        //print("month",month)
+        let text =  daysInMonth(with: month)[indexPath.item].detailText()
+        coordinator?.goToDetailVC(with: text)
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         CGSize(width: view.bounds.size.width,
                height: Constant.headerHeight)
     }
 }
+
 //MARK: - UICollectionViewDelegateFlowLayout
 extension ListViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -157,10 +140,17 @@ extension ListViewController: UICollectionViewDelegateFlowLayout {
                             bottom: Constant.minimumSpasing,
                             right:Constant.minimumSpasing)
     }
-    
 }
+
+// MARK: - Private Methods
 private extension ListViewController {
-            //MARK: - months() return all cases of months
+    private func setupCollectionView() {
+        listCollectionView.backgroundColor = .clear
+        view.addSubview(listCollectionView)
+        listCollectionView.dataSource = self
+        listCollectionView.delegate = self
+    }
+
      func months() -> [Int] {
          let arr = Array(Set(datasourse.compactMap { Int($0.dateArray()[1]) })).sorted()
                 return arr
@@ -169,22 +159,4 @@ private extension ListViewController {
     func daysInMonth(with month: Int) -> [Casualties] {
         return datasourse.filter { $0.dateArray()[1] == month }
     }
-      
-//    func getMonth(by number: Int) -> String {
-//        switch number {
-//        case 1: return  "January"
-//        case 2: return  "February"
-//        case 3: return  "March"
-//        case 4: return  "April"
-//        case 5: return  "May"
-//        case 6: return  "June"
-//        case 7: return  "July"
-//        case 8: return  "August"
-//        case 9: return  "September"
-//        case 10: return  "October"
-//        case 11: return  "November"
-//            
-//        default: return "December"
-//        }
-//    }
 }

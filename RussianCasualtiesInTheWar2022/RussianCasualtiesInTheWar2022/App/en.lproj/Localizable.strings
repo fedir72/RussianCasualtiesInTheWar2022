@@ -1,0 +1,45 @@
+
+"Categories" = "Loses categories";
+"Personnel" = "Personnel";
+"Equipment" = "Equipment";
+
+"January" = "January";
+"February" = "February";
+"March" = "March";
+"April" = "April";
+"May" = "May";
+"June" = "June";
+"July" = "July";
+"August" = "August";
+"September" = "September";
+"October" = "October";
+"November" = "November";
+"December" = "December";
+
+"day: " = "day: ";
+"no data" = "no data";
+
+"date" = "date:";
+"day" = "day:";
+"aircraft" = "aircraft:";
+"helicopter" = "helicopter:";
+"tank" = "tank:";
+"APC" = "APC:";
+"field artillery" = "field artillery:";
+"MRL" = "MRLS:";
+"military auto" = "military auto:";
+"fuel tank" = "fuel tank:";
+"drone" = "drone:";
+"naval ship" = "naval ship:";
+"anti-aircraft warfare" = "anti-aircraft warfare:";
+"special equipment" = "special equipment:";
+"mobile SRBM system" = "mobile SRBM system:";
+"vehicles and fuel tanks" = "vehicles and fuel tanks:";
+"cruise missiles" = "cruise missiles:";
+
+"Casualties in:" = "Casualties in:";
+"Day of war:" = "Day of war:";
+"Personnel:" = "Personnel:";
+"POW:" = "POW:";
+
+"Details" = "Details";

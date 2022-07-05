@@ -7,8 +7,27 @@
 
 import Foundation
 
+private struct Constant {
+    static let date = "date".localized()
+    static let day = "day".localized()
+    static let aircraft = "aircraft".localized()
+    static let helicopter = "helicopter".localized()
+    static let tank = "tank".localized()
+    static let APC = "APC".localized()
+    static let fieldArtillery = "field artillery".localized()
+    static let MLR = "MRL".localized()
+    static let militaryAuto = "military auto".localized()
+    static let fuelTank = "fuel tank".localized()
+    static let drone = "drone".localized()
+    static let navalShip = "naval ship".localized()
+    static let aircraftVarfare = "anti-aircraft warfare".localized()
+    static let specialEquipment = "special equipment".localized()
+    static let mobileSRMsystem = "mobile SRBM system".localized()
+    static let vewiclesAndFuelTanks = "vehicles and fuel tanks".localized()
+    static let cruiseMissile = "cruise missiles".localized()
+}
+
 struct Equipment: Casualties {
-    
     var date: String
     var day: Int
     let aircraft: Int
@@ -29,6 +48,28 @@ struct Equipment: Casualties {
     
     func dateArray() -> [Int] {
         self.date.split(separator: "-").compactMap{ Int($0) }
+    }
+    func detailText() -> String {
+        return
+            """
+            \(Constant.date) \(date)
+            \(Constant.day) \(day.fixZeroValue())
+            \(Constant.aircraft) \(aircraft.fixZeroValue())
+            \(Constant.helicopter) \(helicopter.fixZeroValue())
+            \(Constant.tank) \(tank.fixZeroValue())
+            \(Constant.APC) \(APC.fixZeroValue())
+            \(Constant.fieldArtillery) \(fieldArtillery.fixZeroValue())
+            \(Constant.MLR) \(MRL.fixZeroValue())
+            \(Constant.militaryAuto) \(militaryAuto.fixZeroValue())
+            \(Constant.fuelTank) \(fuelTank.fixZeroValue())
+            \(Constant.drone) \(drone.fixZeroValue())
+            \(Constant.navalShip) \(navalShip.fixZeroValue())
+            \(Constant.aircraftVarfare) \(antiAircraftWarfare.fixZeroValue())
+            \(Constant.specialEquipment) \(specialEquipment.fixZeroValue())
+            \(Constant.mobileSRMsystem) \(mobileSRBMsystem.fixZeroValue())
+            \(Constant.vewiclesAndFuelTanks) \(vehiclesAndFuelTanks.fixZeroValue())
+            \(Constant.cruiseMissile) \(cruiseMissiles.fixZeroValue())
+            """
     }
     
     init(with dictionary: [String:Any]) {

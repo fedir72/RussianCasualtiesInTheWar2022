@@ -19,17 +19,23 @@ class CategoryTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        backgroundColor = .clear
-       
+            setupUI()
     }
-//    override func setSelected(_ selected: Bool, animated: Bool) {
-//        super.setSelected(selected, animated: animated)
-//
-//
-//    }
+
     open func setupCell(with category: Category) {
-        self.categoryImageView.image = UIImage(systemName: category.imageName())
+        self.categoryImageView.image = UIImage(named:  category.imageName())
         self.categorylabel.text = category.categoryName()
         
+    }
+    
+    private func setupUI() {
+        categoryImageView.backgroundColor = .white
+        categoryImageView.layer.cornerRadius = 10
+        categoryImageView.layer.borderWidth = 2
+        categoryImageView.layer.borderColor = UIColor.systemGray4.cgColor
+        categoryImageView.contentMode = .center
+        categoryImageView.clipsToBounds = true
+        backgroundColor = .clear
+        categorylabel.tintColor = .systemGray2
     }
 }
