@@ -6,44 +6,39 @@
 //
 
 import UIKit
+//MARK: - controller constants
+private struct Constant {
+    static let titleTExt = "Categories".localized()
+    static let tableviewColor = UIColor.clear
+    static let heithOhtOfRow: CGFloat = 70
+    }
 
 class CategoryViewController: UIViewController, Storybordable {
-    
     // MARK: - Types
     weak var coordinator: AppCoordinator?
-    // MARK: - Constants
-
-    // MARK: - Public Properties
-
-    // MARK: - Subview Properties
-
-    // MARK: - Private Properties
     private let dataSourse = Category.allCases
+    
+    //MARK: - outlets
     @IBOutlet private weak var categoryTableview: UITableView!
     
-    // MARK: - UIViewController(*)
-    
+    // MARK: - UIViewController lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
-        title  = "Categories".localized()
+        title  = Constant.titleTExt
     }
-    
-    // MARK: - Public Methods
 
     // MARK: - Private Methods
-    
     private func setupTableView() {
         categoryTableview.register(CategoryTableViewCell.nib,
                                    forCellReuseIdentifier: CategoryTableViewCell.id)
-        categoryTableview.backgroundColor = .clear
+        categoryTableview.backgroundColor = Constant.tableviewColor
         categoryTableview.delegate = self
         categoryTableview.dataSource = self
     }
-  
-
 }
 
+//MARK: - UITableViewDataSource
 extension CategoryViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataSourse.count
@@ -57,12 +52,13 @@ extension CategoryViewController: UITableViewDataSource {
         cell.setupCell(with: item)
         return cell
     }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 70
+        return Constant.heithOhtOfRow
     }
- 
 }
 
+//MARK: - UITableViewDelegate
 extension CategoryViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let category = dataSourse[indexPath.row]

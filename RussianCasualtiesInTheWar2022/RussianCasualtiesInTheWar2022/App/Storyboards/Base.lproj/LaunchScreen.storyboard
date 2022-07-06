@@ -16,17 +16,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bucha1" translatesAutoresizingMaskIntoConstraints="NO" id="d6q-pO-kLG">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bucha" translatesAutoresizingMaskIntoConstraints="NO" id="Czk-qa-q95">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Russian losses in the invasion to Ukraine" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mOs-n9-wuG">
+                                <rect key="frame" x="0.0" y="216" width="414" height="91"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="38"/>
+                                <color key="textColor" red="0.96862745098039216" green="0.03629923464915661" blue="0.076613733338114609" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="d6q-pO-kLG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="I03-Kz-JkP"/>
-                            <constraint firstAttribute="bottom" secondItem="d6q-pO-kLG" secondAttribute="bottom" id="KeT-VP-t7Z"/>
-                            <constraint firstItem="d6q-pO-kLG" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="esL-yA-3cw"/>
-                            <constraint firstItem="d6q-pO-kLG" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="ple-SI-qiQ"/>
+                            <constraint firstItem="Czk-qa-q95" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3Ul-fM-HZd"/>
+                            <constraint firstItem="mOs-n9-wuG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="172" id="5lS-e0-B8B"/>
+                            <constraint firstItem="mOs-n9-wuG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="StQ-mm-IgM"/>
+                            <constraint firstAttribute="trailing" secondItem="Czk-qa-q95" secondAttribute="trailing" id="Zdi-QV-pK4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mOs-n9-wuG" secondAttribute="trailing" id="aRL-q5-Ff4"/>
+                            <constraint firstItem="Czk-qa-q95" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="cDP-C4-NMj"/>
+                            <constraint firstAttribute="bottom" secondItem="Czk-qa-q95" secondAttribute="bottom" id="gqC-8l-l5U"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -36,7 +45,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bucha1" width="1061" height="1280"/>
+        <image name="bucha" width="1322" height="1433"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

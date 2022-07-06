@@ -6,20 +6,24 @@
 //
 
 import UIKit
+//MARK: - controller constants
+private struct Constant {
+    static let titleText = "Details".localized()
+}
 
 class DetailViewController: UIViewController, Storybordable {
  
     weak var coordinator: AppCoordinator?
     var descriptionText: String?
  
-    @IBOutlet weak var textLabel: UILabel!
+    @IBOutlet private weak var textLabel: UILabel!
     
     //MARK: - viewcontroller lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Details".localized()
-        if let item = descriptionText {
-            textLabel.text = item
+        title = Constant.titleText
+        if let descriptionText = descriptionText {
+            textLabel.text = descriptionText
         }
     }
 }

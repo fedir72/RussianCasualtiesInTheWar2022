@@ -13,6 +13,7 @@ fileprivate struct Constant {
     static let numberOfItemsInRow: CGFloat = 7
     static let aspectRatio: CGFloat = 1.1
     static let headerHeight: CGFloat = 40
+    static let collectionViewColor = UIColor.clear
 }
 
 class ListViewController: UIViewController, Storybordable {
@@ -38,7 +39,6 @@ class ListViewController: UIViewController, Storybordable {
     }()
     
     // MARK: - UIViewController lifecycle
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         if let category = category {
@@ -60,7 +60,7 @@ class ListViewController: UIViewController, Storybordable {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        listCollectionView.frame = view.bounds
+        //listCollectionView.frame = view.bounds
         setupCollectionView()
     }
 }
@@ -145,15 +145,16 @@ extension ListViewController: UICollectionViewDelegateFlowLayout {
 // MARK: - Private Methods
 private extension ListViewController {
     private func setupCollectionView() {
-        listCollectionView.backgroundColor = .clear
+        listCollectionView.backgroundColor = Constant.collectionViewColor
         view.addSubview(listCollectionView)
+        listCollectionView.frame = view.bounds
         listCollectionView.dataSource = self
         listCollectionView.delegate = self
     }
 
      func months() -> [Int] {
          let arr = Array(Set(datasourse.compactMap { Int($0.dateArray()[1]) })).sorted()
-                return arr
+         return arr
     }
             
     func daysInMonth(with month: Int) -> [Casualties] {

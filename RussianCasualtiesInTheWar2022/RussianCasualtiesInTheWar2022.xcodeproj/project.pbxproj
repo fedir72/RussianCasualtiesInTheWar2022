@@ -144,8 +144,8 @@
 		BDF232E928718C1800DA1E25 /* RussianCasualtiesInTheWar2022 */ = {
 			isa = PBXGroup;
 			children = (
-				BD696FEC28743621000D3B87 /* Extensions */,
 				BDF2330128718D1900DA1E25 /* App */,
+				BD696FEC28743621000D3B87 /* Extensions */,
 				BDF2331A2871BC9000DA1E25 /* DataManager */,
 				BDF232FE28718CAD00DA1E25 /* Views */,
 				BDF2330C287192DC00DA1E25 /* AppCoordinator */,
@@ -246,9 +246,9 @@
 		BDF2331A2871BC9000DA1E25 /* DataManager */ = {
 			isa = PBXGroup;
 			children = (
+				BDF2331B2871C1D800DA1E25 /* DataManager.swift */,
 				BDF233152871B2B300DA1E25 /* Models */,
 				BDF232FF28718CBD00DA1E25 /* DataJson */,
-				BDF2331B2871C1D800DA1E25 /* DataManager.swift */,
 			);
 			path = DataManager;
 			sourceTree = "<group>";

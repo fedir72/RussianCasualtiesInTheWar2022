@@ -8,26 +8,28 @@
 import UIKit
 
 class HeaderReusableView: UICollectionReusableView {
-    
+    //MARK: - static properies and methods
     static let id = "HeaderReusableView"
     static func nib() -> UINib {
         return UINib(nibName: self.id, bundle: nil)
     }
     
+    //MARK: - outlets
     @IBOutlet private weak var yearLabel: UILabel!
     @IBOutlet private weak var monthLabel: UILabel!
     
+    //MARK: - lifecycle methods
     override func awakeFromNib() {
         super.awakeFromNib()
-        backgroundColor = .tertiarySystemFill
-        monthLabel.textColor = .gray
+      setupUI()
     }
     
+    //MARK: - public methods
     open func setupHeader(with number: Int ) {
         monthLabel.text = getMonth(by: number)
     }
     
-    func getMonth(by number: Int) -> String {
+    open func getMonth(by number: Int) -> String {
         switch number {
         case 1: return  "January".localized()
         case 2: return  "February".localized()
@@ -43,5 +45,11 @@ class HeaderReusableView: UICollectionReusableView {
             
         default: return "December".localized()
         }
+    }
+    
+    //MARK: - private methods
+    private func setupUI() {
+        backgroundColor = .tertiarySystemFill
+        monthLabel.textColor = .gray
     }
 }
