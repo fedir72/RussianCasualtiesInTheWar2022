@@ -21,7 +21,7 @@ class ListViewController: UIViewController, Storybordable {
     private let dataManager = DataManager.shared
     weak var coordinator: AppCoordinator?
     var category: Category?
-    var datasourse = [Casualties]() {
+     private  var datasourse = [Casualties]() {
         didSet { listCollectionView.reloadData() }
     }
 
