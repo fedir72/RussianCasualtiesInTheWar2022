@@ -17,11 +17,14 @@ fileprivate struct Constant {
 }
 
 class ListViewController: UIViewController, Storybordable {
+    
     // MARK: - Types
+    
+   // private let transition = CustomTransitionAnimator()
     private let dataManager = DataManager.shared
     weak var coordinator: AppCoordinator?
     var category: Category?
-     private  var datasourse = [Casualties]() {
+    private  var datasourse = [Casualties]() {
         didSet { listCollectionView.reloadData() }
     }
 
@@ -60,10 +63,12 @@ class ListViewController: UIViewController, Storybordable {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        //listCollectionView.frame = view.bounds
         setupCollectionView()
     }
+    
 }
+
+
 
 //MARK: - UICollectionViewDatasourse
 extension ListViewController: UICollectionViewDataSource {
@@ -103,14 +108,12 @@ extension ListViewController: UICollectionViewDataSource {
         view.setupHeader(with: monthNumber )
         return view
     }
-    
 }
 
 //MARK: - UICollectionViewDelegate
 extension ListViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let month = months()[indexPath.section]
-        //print("month",month)
         let text =  daysInMonth(with: month)[indexPath.item].detailText()
         coordinator?.goToDetailVC(with: text)
     }

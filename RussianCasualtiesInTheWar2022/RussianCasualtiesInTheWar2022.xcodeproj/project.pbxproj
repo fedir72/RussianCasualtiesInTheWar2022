@@ -12,6 +12,7 @@
 		BD04C61E2873030600410DD8 /* ListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD04C61C2873030600410DD8 /* ListCollectionViewCell.xib */; };
 		BD04C62328731A1900410DD8 /* HeaderReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD04C62128731A1900410DD8 /* HeaderReusableView.swift */; };
 		BD04C62428731A1900410DD8 /* HeaderReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD04C62228731A1900410DD8 /* HeaderReusableView.xib */; };
+		BD5AD74828842EBD00D16AE6 /* CustomTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5AD74728842EBD00D16AE6 /* CustomTransitionAnimator.swift */; };
 		BD696FE7287434C8000D3B87 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BD696FE9287434C8000D3B87 /* Localizable.strings */; };
 		BDAD9A4C28736C7800437F12 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAD9A4B28736C7800437F12 /* Extensions.swift */; };
 		BDB9896C28721B6E004FAE1A /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB9896B28721B6E004FAE1A /* CustomError.swift */; };
@@ -41,6 +42,7 @@
 		BD04C61C2873030600410DD8 /* ListCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListCollectionViewCell.xib; sourceTree = "<group>"; };
 		BD04C62128731A1900410DD8 /* HeaderReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderReusableView.swift; sourceTree = "<group>"; };
 		BD04C62228731A1900410DD8 /* HeaderReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderReusableView.xib; sourceTree = "<group>"; };
+		BD5AD74728842EBD00D16AE6 /* CustomTransitionAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTransitionAnimator.swift; sourceTree = "<group>"; };
 		BD696FE1287433E5000D3B87 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		BD696FE2287433E5000D3B87 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Main.strings; sourceTree = "<group>"; };
 		BD696FE3287433EE000D3B87 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -109,6 +111,14 @@
 			path = Header;
 			sourceTree = "<group>";
 		};
+		BD5AD74628842E1F00D16AE6 /* CustomTransitionAnimator */ = {
+			isa = PBXGroup;
+			children = (
+				BD5AD74728842EBD00D16AE6 /* CustomTransitionAnimator.swift */,
+			);
+			path = CustomTransitionAnimator;
+			sourceTree = "<group>";
+		};
 		BD696FEC28743621000D3B87 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +156,7 @@
 			children = (
 				BDF2330128718D1900DA1E25 /* App */,
 				BD696FEC28743621000D3B87 /* Extensions */,
+				BD5AD74628842E1F00D16AE6 /* CustomTransitionAnimator */,
 				BDF2331A2871BC9000DA1E25 /* DataManager */,
 				BDF232FE28718CAD00DA1E25 /* Views */,
 				BDF2330C287192DC00DA1E25 /* AppCoordinator */,
@@ -336,6 +347,7 @@
 				BDF2331C2871C1D800DA1E25 /* DataManager.swift in Sources */,
 				BDB9896C28721B6E004FAE1A /* CustomError.swift in Sources */,
 				BDF232EF28718C1800DA1E25 /* CategoryViewController.swift in Sources */,
+				BD5AD74828842EBD00D16AE6 /* CustomTransitionAnimator.swift in Sources */,
 				BDF233192871B2F200DA1E25 /* Personnel.swift in Sources */,
 				BDF233172871B2E000DA1E25 /* Equipment.swift in Sources */,
 				BD04C61D2873030600410DD8 /* ListCollectionViewCell.swift in Sources */,

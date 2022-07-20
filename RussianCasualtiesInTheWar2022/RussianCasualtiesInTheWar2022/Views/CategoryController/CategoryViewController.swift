@@ -13,9 +13,12 @@ private struct Constant {
     static let heithOhtOfRow: CGFloat = 70
     }
 
-class CategoryViewController: UIViewController, Storybordable {
+class CategoryViewController: UIViewController,
+                              Storybordable {
     // MARK: - Types
+    
     weak var coordinator: AppCoordinator?
+    private let transition = CustomTransitionAnimator()
     private let dataSourse = Category.allCases
     
     //MARK: - outlets
@@ -25,9 +28,11 @@ class CategoryViewController: UIViewController, Storybordable {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
+        navigationController?.delegate = self
         title  = Constant.titleTExt
     }
-
+    
+ 
     // MARK: - Private Methods
     private func setupTableView() {
         categoryTableview.register(CategoryTableViewCell.nib,
@@ -63,6 +68,20 @@ extension CategoryViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let category = dataSourse[indexPath.row]
         categoryTableview.deselectRow(at: indexPath, animated: true)
-        coordinator?.goToListVC(with: category )
+        
+        let startFrame = CGRect(x: 0, y: 0, width: 57, height: 57)
+        transition.originFrame = startFrame
+        coordinator?.goToListVC(with: category)
+    }
+}
+
+//MARK: - UINavigationControllerDelegate
+extension CategoryViewController: UINavigationControllerDelegate {
+    func navigationController(_ navigationController: UINavigationController,
+                              animationControllerFor operation: UINavigationController.Operation,
+                              from fromVC: UIViewController,
+                              to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.operation = operation
+        return transition
     }
 }

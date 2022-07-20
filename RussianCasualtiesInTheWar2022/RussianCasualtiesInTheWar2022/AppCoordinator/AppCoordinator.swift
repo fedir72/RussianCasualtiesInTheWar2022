@@ -28,6 +28,7 @@ class AppCoordinator: Coordinator {
         vc.coordinator = self
         vc.title =  "\(type.categoryName())"
         vc.category = type
+        
         navigationController.pushViewController(vc, animated: true)
     }
     
@@ -36,6 +37,7 @@ class AppCoordinator: Coordinator {
         vc.coordinator = self
         vc.descriptionText = text
         navigationController.pushViewController(vc, animated: true)
+        
     }
     
 }
