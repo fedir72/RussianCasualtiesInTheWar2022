@@ -23,15 +23,13 @@ class CustomTransitionAnimator: NSObject,
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         
         //передаем во вне наш переход для манипуляций в других методах
-        storedContext = transitionContext
+       // storedContext = transitionContext
         
         if operation == .push {
             
            let container = transitionContext.containerView
-            
             let startView = transitionContext.view(forKey: .to)
             startView?.alpha = 0
-            
             guard let startView = startView else {
                 return
             }
@@ -59,8 +57,8 @@ class CustomTransitionAnimator: NSObject,
             UIView.animate(withDuration: duration,
                            delay: 0.1,
                            usingSpringWithDamping: 0.7,
-                           initialSpringVelocity: 0.3,
-                           options: [.curveEaseOut]) {
+                           initialSpringVelocity: 0.2,
+                           options: [.curveEaseIn]) {
                 startView.transform = CGAffineTransform.identity
                 startView.center = CGPoint(x: finalFrame.midX, y: finalFrame.midY)
                 startView.alpha = 1.0
@@ -90,10 +88,10 @@ class CustomTransitionAnimator: NSObject,
             }
             container.bringSubviewToFront(startView)
             UIView.animate(withDuration: duration,
-                           delay: 0.1,
+                           delay: 0.3,
                            usingSpringWithDamping: 0.7,
-                           initialSpringVelocity: 0.3,
-                           options: [.curveEaseIn]) {
+                           initialSpringVelocity: 0.1,
+                           options: [.curveEaseOut]) {
                 startView.transform = CGAffineTransform(scaleX: XscaleIndex, y: YscaleIndex)
                 startView.frame = self.originFrame
                 startView.alpha = 0
@@ -102,20 +100,4 @@ class CustomTransitionAnimator: NSObject,
             }
         }
     }
-    
-    func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
-        if let context = storedContext {
-          context.completeTransition(!context.transitionWasCancelled)
-          //reseet logo
-          let fromVC = context.viewController(forKey: .from)
-            print("VC",fromVC)
-            //удалить анимашку
-          fromVC?.view.layer.mask = nil
-          let toVC = context.viewController(forKey: .to) as? DetailViewController
-          toVC?.view.layer.mask = nil
-        }
-        //удалить переход
-        storedContext = nil
-    }
-    
 }
