@@ -69,7 +69,7 @@ extension CategoryViewController: UITableViewDelegate {
         let category = dataSourse[indexPath.row]
         categoryTableview.deselectRow(at: indexPath, animated: true)
         
-        let startFrame = CGRect(x: 0, y: 0, width: 57, height: 57)
+        let startFrame = CGRect(x: 0, y: 0, width: 2, height: 2)
         transition.originFrame = startFrame
         coordinator?.goToListVC(with: category)
     }

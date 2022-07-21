@@ -11,7 +11,7 @@ class CustomTransitionAnimator: NSObject,
                                 UIViewControllerAnimatedTransitioning,
                                 CAAnimationDelegate {
     
-    let duration = 1.8
+    let duration = 1.0
     var originFrame: CGRect = CGRect.zero //start point of animation transition
     var operation: UINavigationController.Operation = .pop
     
@@ -30,13 +30,11 @@ class CustomTransitionAnimator: NSObject,
             let container = transitionContext.containerView
             let fromView = transitionContext.view(forKey: .from)
             let startView = transitionContext.view(forKey: .to)
-            //startView?.alpha = 0
             guard let startView = startView,
                   let fromView = fromView
             else {
                 return
             }
-            startView.alpha = 0
             //start and finish frames of animation
             let initFrame =  originFrame
             let finalFrame = startView.frame
@@ -63,10 +61,10 @@ class CustomTransitionAnimator: NSObject,
                            usingSpringWithDamping: 0.7,
                            initialSpringVelocity: 0.2,
                            options: [.curveEaseIn]) {
-                fromView.backgroundColor = .darkGray
+                fromView.backgroundColor = .systemBlue
                 startView.transform = CGAffineTransform.identity
-                startView.center = CGPoint(x: finalFrame.midX, y: finalFrame.midY)
-                startView.alpha = 1.0
+                startView.center = CGPoint(x: finalFrame.midX,
+                                           y: finalFrame.midY)
             } completion: { done in
                 fromView.backgroundColor =  UIColor(named: "customBackgroundColor")
                 transitionContext.completeTransition(done)
@@ -75,14 +73,16 @@ class CustomTransitionAnimator: NSObject,
         } else if operation == .pop {
             
             let container = transitionContext.containerView
-            let fromView = transitionContext.view(forKey: .from)
+            let destinationView = transitionContext.view(forKey: .to)
             let startView = transitionContext.view(forKey: .from)
+            
             guard let startView = startView,
-                  let fromView = fromView
+                  let destinationView = destinationView
             else {
                 transitionContext.completeTransition(false)
                 return
             }
+            destinationView.backgroundColor = .systemBlue
     
             //start and finish frames of animation
             let initFrame = startView.frame
@@ -97,16 +97,14 @@ class CustomTransitionAnimator: NSObject,
             }
             container.bringSubviewToFront(startView)
             UIView.animate(withDuration: duration,
-                           delay: 0.3,
+                           delay: 0.1,
                            usingSpringWithDamping: 0.7,
-                           initialSpringVelocity: 0.1,
+                           initialSpringVelocity: 0.2,
                            options: [.curveEaseOut]) {
-                fromView.backgroundColor = .darkGray
                 startView.transform = CGAffineTransform(scaleX: XscaleIndex, y: YscaleIndex)
                 startView.frame = self.originFrame
-                startView.alpha = 0
+                destinationView.backgroundColor = UIColor(named: "customBackgroundColor")
             } completion: { done in
-                fromView.backgroundColor = UIColor(named: "customBackgroundColor")
                 transitionContext.completeTransition(done)
             }
         }
